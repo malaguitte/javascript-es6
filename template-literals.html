@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Template literals</title>
+    </head>
+    <body>
+    </body>
+
+
+    <script type="text/javascript">
+
+    const canada = {
+        live: 'Vancouver',
+        love: 'Toronto'
+    };
+    //regular
+    const text = 'I live in ' + canada.live + ', and I love ' + canada.love +'!';
+    //using template literal
+    const newText = `I live in ${canada.live}, and I love ${canada.love}`;
+    
+    console.log(text);
+    console.log(newText);
+
+    const fruits = 'banana' + '\n' + 'orange' + '\n' + 'apple';
+    // console.log(fruits);
+    const newFruits = 
+`banana
+orange
+apple`;
+    console.log(newFruits);
+
+    </script>
+</html>
