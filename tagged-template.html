@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Tagged template</title>
+</head>
+<style>
+.red {
+    color: red;
+    font-size: 25px;
+}
+</style>
+<body>
+</body>
+
+
+<script type="text/javascript">
+
+function red(template, ...values) {
+    return template.reduce((accumulator,part,i) => {
+        return `
+            ${accumulator}
+            <span class='red'>${values[i - 1].toUpperCase()}</span>
+            ${part}
+        `;
+    });
+}
+
+const city         = 'Toronto';
+const something    = 'CN Tower';
+const anotherthing = 'casa loma';
+
+const toronto = red`I live in ${city} the city where ${something} is, and we also have ${anotherthing} in here`;
+document.body.innerHTML = toronto;
+
+</script>
+</html>
