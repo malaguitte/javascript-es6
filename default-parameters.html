@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>default parameters</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //ES 5
+        // function hello(name, surname) {
+        //     name  = name || 'Anderson';
+        //     surname  = surname || 'Malagutti';
+        //     console.log(`Hello ${name} ${surname}. How are you?`);
+        // }
+        
+        //es 6
+        function hello(name = 'Anderson', surname = 'Malagutti') {
+            console.log(`Hello ${name} ${surname}. How are you?`);
+        }
+
+        hello('Name','Surname');
+    </script>
+</html>
