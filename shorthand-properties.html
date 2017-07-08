@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>shorthand properties</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        let name    = 'Anderson';
+        let surname = 'Malagutti';
+        let age     = 24;
+
+        //ES 5
+        // const person = {
+        //     name: name,
+        //     surname: surname,
+        //     age: age,
+
+        //     hello: function() {
+        //         console.log('hello');
+        //     }
+        // };
+
+        //ES 6        
+        const person = {
+            name,
+            surname,
+            age,
+
+            hello() {
+                console.log('hello');
+            }
+        };
+
+        person.hello();
+    </script>
+</html>
