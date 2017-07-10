@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Spread function</title>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        function makeSandwich(bread, cheese, sauce) {
+            console.log(`Your sandwich with ${bread} bread, ${cheese} cheese, and ${sauce} is done!`);
+        }
+        const igredients = ['italian', 'cheedar', 'barbecue'];
+        // makeSandwich('italian', 'cheedar', 'ketchup');
+        makeSandwich(...igredients);
+    </script>
+</html>
