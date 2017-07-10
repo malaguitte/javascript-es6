@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Array find and find index</title>
+    </head>
+    <body>
+    </body>
+
+    <script>
+    
+        var data = {
+            name: 'Anderson',
+            surname: 'Malagutti',
+            age: 24,
+            website: 'https://about.me/malagutti',
+            social : {
+                twitter: '@upmalagutti',
+                facebook: 'upmalagutti'
+            }
+        };  
+        // const name = data.name;
+        // const surname = data.surname;
+        // const age = data.age;
+        // const twitter = data.social.twitter;
+        // console.log(age);
+
+        const {name,surname} = data;
+        console.log(name);
+        console.log(surname);
+        const {twitter, facebook} = data.social;
+        console.log(twitter);
+        console.log(facebook);
+        const {facebook: fb} = data.social;
+        console.log(fb);
+        const {city = 'Toronto'} = data;
+        console.log(city);
+
+        //Similar to this:
+        // import {React} from 'react';
+
+    </script>   
+</html>
