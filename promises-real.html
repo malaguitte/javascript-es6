@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Promises 1</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //get posts
+        var posts = fetch('https://willianjusten.com.br/search.json');
+        //pending
+        //resolved
+        //rejected
+        console.log(posts);
+        setTimeout(() => {
+            console.log(posts);
+        }, 2000);
+
+        posts
+            .then((data) => data.json())
+            // .then((data) => data.map(post => {
+            //     console.log(post.title)
+            // }))
+            .then((data) => {
+              throw new Error('There is an error...');  
+            })
+            .catch((error) => console.log(error));
+
+    </script>
+</html>
