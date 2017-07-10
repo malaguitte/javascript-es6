@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Array find and find index</title>
+    </head>
+    <body>
+    </body>
+
+    <script>
+        let front = ['react', 'angular', 'vue'];
+        let back = ['python', 'ruby', 'nodejs'];
+        // console.log([...'mala']); // turns to array
+        // console.log(...'mala');
+        // console.log(...front);
+
+        //old way
+        // let fullstack = [];
+        // fullstack = fullstack.concat(front);
+        // fullstack.push('RxJS');
+        // fullstack = fullstack.concat(back);
+
+        let fullstack = [...front, 'RxJS', ...back];
+
+        console.log(fullstack);
+    </script>   
+</html>
