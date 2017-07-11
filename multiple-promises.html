@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Multiple promises</title>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        
+    const currency = new Promise((resolve, reject) => {
+        setTimeout( () => {
+            resolve({currency: 'euro', value: 3.75});
+        }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) => {
+        resolve(['Ireland', 'England', 'France', 'Germany']);
+    });
+
+    //gets all responses
+    Promise.all([currency, countries])  
+            .then( (responses) => {
+                console.log(responses)
+            });
+            
+    //gets the first response and uses it, ignores everything else.
+    Promise.race([currency, countries])  
+            .then( (response) => {
+                console.log(response)
+            })
+
+    </script>
+</html>
