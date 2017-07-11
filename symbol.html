@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS symbol</title>
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        let foo = Symbol('name');
+        let bar = Symbol('name');
+
+        //doesnt work, internaly they are different
+        console.log(foo == bar);
+
+        let obj = {
+            [Symbol('name')]: 'Anderson',
+            [Symbol('age')]: 24,
+            city: 'Toronto'
+        }
+        console.log(obj);
+        const symbols = Object.getOwnPropertySymbols(obj);
+        const data = symbols.map((symbol) => obj[symbol]);
+        console.log(data);
+    </script>
+</html>
