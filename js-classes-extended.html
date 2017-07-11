@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Js class</title>
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        class Animal
+        {
+            constructor(name) 
+            {
+                this.name  = name;
+            }
+            hello() {
+                console.log(`Hello, I am ${this.name}`);
+            }
+            static info()
+            {
+                console.log('animal class');
+            }
+        }
+
+        class Dog extends Animal
+        {
+            constructor(name, sound)
+            {
+                super(name);//getting stuff from the "mother's" class
+                this.sound = sound;
+            }
+            bark() 
+            {
+                console.log(`${this.sound} I am ${this.name}`);
+            }
+        }
+
+        const elephant = new Animal('Dumbo');
+        const dog = new Dog('Rex', 'Au Au Au');
+
+    </script>
+</html>
