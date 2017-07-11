@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Js class</title>
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        //class
+        function Animal (kind, sound) 
+        {
+            //constructor
+            this.kind  = kind;
+            this.sound = sound;
+        }
+
+        //method
+        Animal.prototype.hello = function() 
+        {
+            console.log(`${this.sound} I am a ${this.kind}`);    
+        }
+
+        const dog = new Animal('dog', 'au au');
+        const cat = new Animal('cat', 'meaw');
+
+        console.log(dog);
+        console.log(cat);
+    </script>
+</html>
