@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Js class</title>
+    </head>
+    <body>
+    
+    </body>
+    <script>
+
+        class Animal
+        {
+            constructor(kind, sound) 
+            {
+                this.kind  = kind;
+                this.sound = sound;
+            }
+
+            hello() 
+            {
+                console.log(`${this.sound} I am a ${this.kind}`);    
+            }
+
+            //only works calling Animal.info
+            static info()
+            {
+                console.log('This is a class to create animals');
+            }
+
+            get name()
+            {
+                console.log(`I dont know my name... ${this.sound}`);
+            }
+
+            set nickname(nick)
+            {
+                this.nick = nick;
+            }
+
+        }
+        const dog = new Animal('dog', 'auau');
+        const cat = new Animal('cat', 'meow');
+
+    </script>
+</html>
