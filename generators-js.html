@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>For Of JS</title>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+    // function genNames()
+    // {
+    //     console.log('Anderson');
+    //     console.log('Heverton');
+    //     console.log('Vinicius');
+    // } 
+
+    //generator
+    function* genNames()
+    {
+        //yield works as a ~breakpoint/return~ for one iteration at a time
+        console.log('Calling first name');
+        yield('Anderson');
+        console.log('Calling second name');
+        yield('Heverton');
+        console.log('Calling third name');
+        yield('Vinicius'); 
+    }
+    const names = genNames();
+    console.log(names); //has not been called yet.
+
+    console.log(names.next().value);
+    console.log(names.next().value);
+    console.log(names.next().value);
+    </script>
+</html>
