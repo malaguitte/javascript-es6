@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>For Of JS</title>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+    const text = 'Toronto'; //iterable
+    const it   = text[Symbol.iterator](); //iterator
+    
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next()); //done
+
+    for (letter of text) {
+        console.log(letter);
+        if (letter == 'n') break;
+    }
+        
+    </script>
+</html>
