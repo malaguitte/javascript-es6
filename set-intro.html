@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Set intro</title>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        //Only unique values. It doesn't allow repetition
+        let mySet = new Set(['Anderson','Malagutti','Heverton']);
+        mySet.add('Carlos');
+        mySet.add('Carlos');
+        mySet.add('Anderson');
+        mySet.add('Carlos');
+        mySet.delete('Malagutti');
+
+        console.log(mySet);
+        console.log(mySet.has('Malagutti')); //false as we deleted it
+        console.log(mySet.has('SomeName')); //false
+        console.log(mySet.has('Anderson')); //true
+
+        //This won't work as this it is not an array.
+        // console.log(mySet[1]);
+
+
+        //iterator
+        let it = mySet.values();
+        // it.next();
+        // it.next();
+
+        for (name of it) {
+            console.log(name);
+        }
+
+    </script>
+</html>
