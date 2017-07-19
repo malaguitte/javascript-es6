@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Weakset intro</title>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        let obj1 = {
+            name: 'Anderson',
+            age: 25
+        };
+        let obj2 = {
+            name: 'Heverton',
+            age: 27
+        };
+        //only accepts objects. 
+        let ws = new WeakSet([obj1, obj2]);
+
+        console.log(ws);
+        console.log(ws.has(obj1)); //true
+
+        //adds obj
+        ws.add({something:'something'});
+        console.log(ws);
+        
+        //removes obj
+        ws.delete(obj2);
+        console.log(ws);
+
+        // ws.clear(); //error, weakset doesnt have this method (set does)
+
+
+        //Won't work as a weakset it's not an iterator. Set is ;)
+        // let it = ws.values();
+        // console.log(it.next())
+
+        // for (obj of it) {
+        //     console.log(obj);    
+        // }
+
+    </script>
+</html>
