@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Proxy Intro</title>
+    </head>
+
+    <body>
+        
+    </body>
+
+
+    <script>
+        let obj = {
+            name: 'Anderson',
+            age: 25
+        };
+
+        let proxy = new Proxy(obj, {
+            get(target, name) 
+            {
+                console.log(`Someone is asking for the name`);
+                return target.name.toLowerCase();
+            },
+            set(target, name, value) 
+            {
+                console.log(`Changing name. Old name: ${target.name}, New name: ${value}`);
+                target.name = value.toUpperCase();
+            }
+        });
+
+
+    </script>
+</html>
