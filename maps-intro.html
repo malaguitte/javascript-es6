@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Maps intro</title>
+  </head>
+
+  <script>
+  
+  let map = new Map();
+  //key , value
+  map.set('Anderson', 25);
+  map.set('Heverton', 27);
+  map.set('Nic', 29);
+  console.log(map);
+  map.delete('Heverton');
+  console.log(map);
+  const it = map.values();
+  console.log(it.next());
+  </script>
+</html>
