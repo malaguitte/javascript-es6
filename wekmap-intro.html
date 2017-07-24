@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>WeakMap</title>
+  </head>
+  <body>
+  </body>
+  <script>
+
+  let obj1 = {
+    name: 'Anderson',
+    age: 25
+  };
+  let obj2 = {
+    name: 'Heverton',
+    age: 27
+  };
+
+  let weakmap = new WeakMap();
+  weakmap.set(obj1,'Anderson info');
+  weakmap.set(obj2,'Heverton info');
+
+  console.log(weakmap);
+
+  /*
+    As we are using a *weak* map, if we remove an object it will
+    disappear from the weakmap later...
+    Sometimes it takes a little while because we are depending of the 
+    garbage collector
+  */
+  // obj1 = null;
+
+  // console.log(weakmap);
+  </script>
+</html>
