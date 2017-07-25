@@ -4426,14 +4426,21 @@ module.exports = _curry2(function where(spec, testObj) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ramda__);
-
+//import method  from 'library'
+//import * as myownname from 'library'
+// import * as Ramda from 'ramda';
+// import union from 'ramda'; //Would work if Ramda had only one method
+// import { union } from 'ramda'; //Ramda has many methods
+ //Ramda has many methods
 
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 5, 5, 6, 6, 7, 7, 9, 8, 10, 1];
 
 var arr3 = __WEBPACK_IMPORTED_MODULE_0_ramda__["union"](arr1, arr2);
+var arr4 = __WEBPACK_IMPORTED_MODULE_0_ramda__["uniq"](arr1);
 
 console.log(arr3);
+console.log(arr4);
 
 /***/ }),
 /* 120 */
