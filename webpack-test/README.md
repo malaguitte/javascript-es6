@@ -6,4 +6,7 @@ Then run, `npm init -y` on that folder.
 After that runs, you can execute: 
 `npm install --save-dev webpack@beta babel-loader babel-core babel-preset-es2015-native-modules`
 
+Don't forget to execute:
+`npm install ramda`
+
 After that remember to create a `.gitignore` file and include the node_modules directory there.

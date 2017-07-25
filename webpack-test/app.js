@@ -1,4 +1,4 @@
-import * as Ramda from 'Ramda';
+import * as Ramda from 'ramda';
 
 const arr1 = [1,1,1,2,2,3,4,5,6,6];
 const arr2 = [5,5,5,6,6,7,7,9,8,10,1];
