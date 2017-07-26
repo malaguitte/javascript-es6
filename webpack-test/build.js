@@ -4426,6 +4426,7 @@ module.exports = _curry2(function where(spec, testObj) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ramda__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(319);
 //import method  from 'library'
 //import * as myownname from 'library'
 // import * as Ramda from 'ramda';
@@ -4433,14 +4434,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import { union } from 'ramda'; //Ramda has many methods
  //Ramda has many methods
 
+//my own import
+
+
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 5, 5, 6, 6, 7, 7, 9, 8, 10, 1];
 
-var arr3 = __WEBPACK_IMPORTED_MODULE_0_ramda__["union"](arr1, arr2);
-var arr4 = __WEBPACK_IMPORTED_MODULE_0_ramda__["uniq"](arr1);
+// const arr3 = join(arr1, arr2);
+// const arr4 = filter_unique(arr1);
+// console.log(arr3);
+// console.log(arr4);
 
-console.log(arr3);
-console.log(arr4);
+console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["a" /* default */](2, 3));
 
 /***/ }),
 /* 120 */
@@ -12103,6 +12108,21 @@ module.exports = _curry3(function zipWith(fn, a, b) {
   return rv;
 });
 
+
+/***/ }),
+/* 319 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+function sum(x, y) {
+  return x + y;
+}
+
+//export main method,
+//it only onlys one `export default` per file
+//you can later import it with any name
+//without using curly braces
+/* harmony default export */ __webpack_exports__["a"] = (sum);
 
 /***/ })
 /******/ ]);
