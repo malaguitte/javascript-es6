@@ -9,6 +9,10 @@ import { union as join, uniq as filter_unique } from 'ramda'; //Ramda has many m
 import mysum from './utils';
 import { sub, multiply, div as sharing, PI } from './utils';
 
+//importing react and react-dom
+import { react } from 'react';
+import { reactDOM } from 'react-dom';
+
 const arr1 = [1,1,1,2,2,3,4,5,6,6];
 const arr2 = [5,5,5,6,6,7,7,9,8,10,1];
 

@@ -15,5 +15,9 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015-native-modules": "^6.9.4",
     "webpack": "^3.0.0-rc.2"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
