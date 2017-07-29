@@ -4447,7 +4447,9 @@ var arr2 = [5, 5, 5, 6, 6, 7, 7, 9, 8, 10, 1];
 // console.log(arr4);
 
 console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["a" /* default */](2, 3));
-console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* sub */](5, 2));
+console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["d" /* sub */](5, 2));
+console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["c" /* multiply */](5, 2));
+console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* div */](14, 2));
 
 /***/ }),
 /* 120 */
@@ -12116,7 +12118,9 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = sub;
+/* harmony export (immutable) */ __webpack_exports__["d"] = sub;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return div; });
 function sum(x, y) {
   return x + y;
 }
@@ -12128,6 +12132,16 @@ function sum(x, y) {
 function sub(x, y) {
   return x - y;
 }
+
+function mult(x, y) {
+  return x * y;
+}
+
+function div(x, y) {
+  return x / y;
+}
+
+
 
 //export main method,
 //it only allows one `export default` per file
