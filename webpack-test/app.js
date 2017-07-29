@@ -21,8 +21,8 @@ const arr2 = [5,5,5,6,6,7,7,9,8,10,1];
 // console.log(arr3);
 // console.log(arr4);
 
-console.log(mysum(2,3));
-console.log(sub(5,2));
-console.log(multiply(5,2));
+console.log(mysum(11,3));
+console.log(sub(5,3));
+console.log(multiply(5,3));
 console.log(sharing(14,2));
 console.log(PI);
