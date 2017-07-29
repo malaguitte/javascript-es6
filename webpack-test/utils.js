@@ -22,11 +22,14 @@ function div(x,y)
   return x / y;
 }
 
-export { mult as multiply, div };
+const PI = 3.14;
+
+export { mult as multiply, div, PI };
 
 //export main method,
 //it only allows one `export default` per file
 //you can later import it with any name
 //without using curly braces
 export default sum;
+
 

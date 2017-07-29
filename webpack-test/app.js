@@ -7,7 +7,7 @@ import { union as join, uniq as filter_unique } from 'ramda'; //Ramda has many m
 
 //my own import
 import mysum from './utils';
-import { sub, multiply, div as sharing } from './utils';
+import { sub, multiply, div as sharing, PI } from './utils';
 
 const arr1 = [1,1,1,2,2,3,4,5,6,6];
 const arr2 = [5,5,5,6,6,7,7,9,8,10,1];
@@ -21,3 +21,4 @@ console.log(mysum(2,3));
 console.log(sub(5,2));
 console.log(multiply(5,2));
 console.log(sharing(14,2));
+console.log(PI);
