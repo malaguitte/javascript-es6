@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const nodeENV = process.env.NODE_ENV || 'production';
 
 module.exports = { 
+  devtool: 'source-map', 
   entry:  {
     filename: './app.js'
   },
@@ -29,7 +30,8 @@ module.exports = {
       },
       output: {
         comments: false
-      }
+      },
+      sourceMap: true
     }),
     new webpack.DefinePlugin({
       'process.env': {
