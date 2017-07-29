@@ -4437,6 +4437,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //my own import
 
 
+
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 5, 5, 6, 6, 7, 7, 9, 8, 10, 1];
 
@@ -4446,6 +4447,7 @@ var arr2 = [5, 5, 5, 6, 6, 7, 7, 9, 8, 10, 1];
 // console.log(arr4);
 
 console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["a" /* default */](2, 3));
+console.log(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* sub */](5, 2));
 
 /***/ }),
 /* 120 */
@@ -12114,12 +12116,21 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = sub;
 function sum(x, y) {
   return x + y;
 }
 
+//named export 
+//we can have many exports on the same file
+//we can only call the method later using the same name
+//the import needs curly braces.
+function sub(x, y) {
+  return x - y;
+}
+
 //export main method,
-//it only onlys one `export default` per file
+//it only allows one `export default` per file
 //you can later import it with any name
 //without using curly braces
 /* harmony default export */ __webpack_exports__["a"] = (sum);
