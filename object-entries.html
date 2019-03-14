@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object.entries</title>
+</head>
+<body>
+
+  <script>
+    const animals = {
+      dog: 10,
+      cat: 5,
+      bird: 7
+    };
+    // console.log(Object.entries(animals));
+    const animalsMap = new Map(Object.entries(animals));
+    
+    console.log(animalsMap.size); //3
+
+    console.log(animalsMap.has('dog')); //true
+    console.log(animalsMap.has('lion')); //false
+
+    console.log(animalsMap.get('cat')); //5
+  </script>
+  
+</body>
+</html>
