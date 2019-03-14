@@ -1,0 +1,49 @@
+<!--
+  Basic
+    - async/await works on the promises' protocol
+    - async is a keyword used in the beginning of a function
+    - await is a term used to tell a function to wait for a result from a Promise
+    - await can only be used for an async function 
+    - async/await already works for most browsers and NodeJS
+  Advantages of using async/await
+    - The code looks simpler
+    - Easier to debug since it has less callbacks
+    - Simple to convert a promise to async/await
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>03 - Async/Await Multiple promises</title>
+</head>
+
+<body>
+</body>
+
+<script>
+  async function getUsers(usersArray) {
+    // waits for the 1st promise, then goes to the 2nd
+    // const anderson = await fetch('https://api.github.com/users/malagutti');
+    // const nic = await fetch('https://api.github.com/users/nic');
+
+    // const anderson = fetch('https://api.github.com/users/malagutti');
+    // const nic = fetch('https://api.github.com/users/nic');
+    // const promises = await Promise.all([anderson,nic]);
+
+    const githubUsersApi = 'https://api.github.com/users';
+    const promises = usersArray.map(user => 
+      fetch(`${githubUsersApi}/${user}`).then(res => res.json()));
+
+    const people = await Promise.all(promises);
+    console.log(people);
+    people.map(person => {
+      console.log(person.login);
+      console.log(person.name);
+      console.log(person.location);
+      console.log(person.company);
+    });
+  }
+  const users = ['malagutti', 'nic', 'hevertoncastro', 'hevertonrodrigues'];
+  getUsers(users);
+</script>
+</html>
