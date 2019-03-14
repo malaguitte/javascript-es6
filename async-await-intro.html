@@ -1,0 +1,46 @@
+<!--
+  Basic
+    - async/await works on the promises' protocol
+    - async is a keyword used in the beginning of a function
+    - await is a term used to tell a function to wait for a result from a Promise
+    - await can only be used for an async function 
+    - async/await already works for most browsers and NodeJS
+  Advantages of using async/await
+    - The code looks simpler
+    - Easier to debug since it has less callbacks
+    - Simple to convert a promise to async/await
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>01 - Async/Await Intro</title>
+</head>
+
+<body>
+</body>
+
+<script>
+  // Promise
+  /*
+  function getPosts() {
+    return fetch('https://willianjusten.com.br/search.json')
+      .then(data => data.json())
+      .then(data => data.map(post => {
+        console.log(post.title);
+      }));
+  }*/
+
+  // Async/Await
+  async function getPosts() {
+    const response = await fetch('https://willianjusten.com.br/search.json');
+    const data = await response.json();
+    return data.map(post => {
+      console.log(post.title);
+    });
+  }
+
+  getPosts();
+
+</script>
+</html>
